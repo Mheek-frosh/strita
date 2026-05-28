@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: #F5F3F0;
+  color: #1a2a3a;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark {
+  background-color: #1a2a3a;
+  color: #F5F3F0;
+}
+
+/* Glassmorphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+body.dark .glass {
+  background: rgba(26, 42, 58, 0.6);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+/* Gold accent */
+.gold-accent {
+  color: #D4AF37;
+}
+
+/* Smooth transitions */
+.smooth-transition {
+  transition: all 0.3s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F3F0;
+}
+
+body.dark ::-webkit-scrollbar-track {
+  background: #1a2a3a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C19F2E;
+}
+
+/* Section divider */
+.divider-accent {
+  border-top: 2px solid #D4AF37;
+  position: relative;
+}
+
+.divider-accent::after {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  background-color: #D4AF37;
+  border-radius: 50%;
+}
+
+/* Button styles */
+.btn-primary {
+  @apply px-6 py-3 bg-burgundy text-cream rounded-lg font-semibold transition-all duration-300 hover:bg-opacity-90 hover:shadow-lg;
+}
+
+.btn-secondary {
+  @apply px-6 py-3 bg-gold text-navy rounded-lg font-semibold transition-all duration-300 hover:bg-opacity-90 hover:shadow-lg;
+}
+
+.btn-outline {
+  @apply px-6 py-3 border-2 border-gold text-gold rounded-lg font-semibold transition-all duration-300 hover:bg-gold hover:text-navy;
+}
+
+/* Hover effects */
+.hover-lift {
+  transition: all 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}

@@ -60,7 +60,7 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-lg md:text-xl text-navy text-opacity-80 dark:text-cream dark:text-opacity-80 mb-8 max-w-2xl mx-auto leading-relaxed"
         >
-          Welcome to St. Rita's Catholic Church Dakwo — God is working wonders in our mist.
+          Welcome to St. Rita's Catholic Church Dakwo — God is working wonders in our midst.
         </motion.p>
 
         <motion.div

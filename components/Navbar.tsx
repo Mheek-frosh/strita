@@ -111,23 +111,23 @@ export default function Navbar() {
           <div className="lg:hidden flex items-center gap-3">
             <button
               onClick={toggleDarkMode}
-              className="p-2 hover:bg-gray-200 dark:hover:bg-navy-600 rounded-lg"
+              className="text-navy dark:text-cream p-2 hover:bg-gray-200 dark:hover:bg-navy-600 rounded-lg"
             >
               {isDark ? (
                 <FiSun className="w-5 h-5 text-gold" />
               ) : (
-                <FiMoon className="w-5 h-5 text-navy" />
+                <FiMoon className="w-5 h-5 text-navy dark:text-cream" />
               )}
             </button>
             
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 hover:bg-gray-200 dark:hover:bg-navy-600 rounded-lg"
+              className="text-navy dark:text-cream p-2 hover:bg-gray-200 dark:hover:bg-navy-600 rounded-lg"
             >
               {isOpen ? (
-                <FiX className="w-6 h-6" />
+                <FiX className="w-6 h-6 text-navy dark:text-cream" />
               ) : (
-                <FiMenu className="w-6 h-6" />
+                <FiMenu className="w-6 h-6 text-navy dark:text-cream" />
               )}
             </button>
           </div>
@@ -143,13 +143,13 @@ export default function Navbar() {
           }}
           className="lg:hidden overflow-hidden"
         >
-          <div className="py-4 border-t border-gold border-opacity-20 space-y-3">
+          <div className="py-4 border-t border-gold/20 dark:border-cream/20 bg-cream dark:bg-navy text-navy dark:text-cream space-y-3">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="block px-4 py-2 hover:bg-gold hover:bg-opacity-10 rounded-lg transition-colors"
+                className="block px-4 py-2 rounded-lg transition-colors text-navy dark:text-cream hover:bg-gold hover:bg-opacity-10 dark:hover:bg-cream dark:hover:bg-opacity-10"
               >
                 {link.name}
               </Link>

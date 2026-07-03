@@ -46,7 +46,7 @@ export default function LoginPage() {
               </button>
             </form>
             <p className="mt-8 text-sm text-cream text-opacity-80">
-              Not an admin? <Link href="/register" className="text-gold underline">Register as a parish member</Link>.
+              Not an admin? <Link href="/register" className="text-gold underline">Register as a new parish member</Link>.
             </p>
           </motion.div>
         </div>
